@@ -1856,7 +1856,9 @@ bool parse_method(struct pool *pool, char *s)
 
 	if(!strncasecmp(buf, "mining.set_extranonce", 21)) {
 		ret = parse_extranonce(pool, params);
-		goto out_decref;
+		//goto out_decref;
+		json_decref(val);
+		return ret;
 	}
 
 	if (!strncasecmp(buf, "client.reconnect", 16) && parse_reconnect(pool, params)) {
