@@ -1265,6 +1265,7 @@ struct pool {
 	/* Stratum variables */
 	bool has_stratum;
 	char *stratum_url;
+	bool extranonce_subscribe;
 	char *stratum_port;
 	struct addrinfo stratum_hints;
 	SOCKETTYPE sock;
